@@ -19,6 +19,7 @@ blocks:
       jobs:
         - name: Store Docker image in cache
           commands:
+            - checkout
             - echo $SEMAPHORE_WORKFLOW_ID
             - docker build -t go_hw:v1 .
             - mkdir docker_image
