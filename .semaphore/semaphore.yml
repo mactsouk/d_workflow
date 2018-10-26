@@ -20,6 +20,7 @@ blocks:
         - name: Store Docker image in cache
           commands:
             - checkout
+            - env | grep ARTEFACT
             - echo $SEMAPHORE_WORKFLOW_ID
             - docker build -t go_hw:v1 .
             - mkdir docker_image
