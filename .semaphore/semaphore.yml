@@ -37,6 +37,6 @@ blocks:
             - ls -l docker_image
             - docker load -i docker_image/go_hw.tar
             - docker images
-            - docker run -d -p 80:80 go_hw:v1
-            - wget localhost:80
+            - docker run -d -p 8000:80 go_hw:v1
+            - wget localhost:8000
 
